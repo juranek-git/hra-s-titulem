@@ -1,0 +1,123 @@
+﻿/* CSS Document */
+body {
+  background-color: #050;
+  font-family: Candara;
+}
+
+#stred {
+  margin: auto;
+  padding: 5px;
+  width: 900px;
+  background-color: #1ac731;
+  border-radius: 4px;
+}
+
+header {
+  width: 880px;
+  height: 200px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #080;
+  border-radius: 4px;
+  background: url("./img/king.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+
+header h1 {
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: -2px -2px 2px #ffea00, 2px 2px 2px #ffea00, -2px 2px 2px #ffea00, 2px -2px 2px #ffea00;
+  color: #050;
+  text-align: left;
+  padding: 10px 10px 10px 90px;  
+}
+
+nav {
+  width: 880px;
+  height: 80 px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #32ab27;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style:none;
+}
+
+nav ul li {
+  display: inline-block;
+  width: 150px;
+  padding: 2px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-align: center;
+  color: #32ab27;
+  background-color: white; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #32ab27;
+}
+
+nav ul li:hover {
+  color: #080;
+  border: 2px solid #ffea00;
+  background-color: #ffea00;
+}
+
+footer {
+  width: 880px;
+  height: 100px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #080;
+  border-radius: 4px;
+}
+
+footer p {
+  display: block;
+  text-align: right;
+  color: white;
+}
+
+main {
+  width: 880px;
+  height: 510px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #32ab27;
+  color: #ffea00;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+#levy {
+  width: 190px;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 5px;
+  float: left; 
+}
+
+#central {
+  margin: 0px 5px;
+  padding: 5px;
+  width: 448px;
+  height: 496px;
+  border: 2px solid white;
+  border-radius: 4px;
+  float: left;
+}
+
+#pravy {
+  width: 190px;
+  border: 2px solid white;
+  border-radius: 4px;
+  float: left;
+  padding: 5px; 
+}
