@@ -1,0 +1,169 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="..\styly\hst_styl.css"> 
+  <title> Hra s Titulem </title>
+  <!-- načtení skriptů - - - - - - - - - - - - - - - - - - - - - - - - - - -->     
+     <script src="..\skripty\funkce.js"></script>
+     <script src="..\skripty\lokace.js"></script>
+     <script src="..\skripty\inventar.js"></script>
+     <script src="..\skripty\souboj.js"></script>
+  </head>
+  <body onload="nacteno();">
+    <div id="stred">
+<!-- hlavička - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <header>
+      <img src="..\img\king.png" height="200px" style="float:right">
+      <h1> Hra s titulem </h1>
+    </header>
+<!-- navigační panel - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <nav>
+      <ul>
+        <li><a href=".\uvod.html"> Úvod </a></li>
+        <li><a href=".\hra.html"> Hra </a></li>          
+        <li><a href=".\forum.html"> Fórum </a></li>
+        <li><a href=".\autor.html"> Autor </a></li>
+        <li><a href=".\test.html"> Test </a></li>
+      </ul>
+    </nav>
+<!-- okno překrytí, defaultně skryté - - - - - - - - - - - - - - - - - - -->
+    <div id="prekryti">
+      <div id="souboj">
+         <div id="souboj_foto">
+         <img src="..\img\mob\vlk.png">
+         </div>
+         <div id="souboj_jmeno">
+         </div>
+         <div id="souboj_text">
+         </div>
+         <div id="souboj_hp">
+         </div>
+         <div id="souboj_tlacitka"> &nbsp;
+           <button id="souboj_tl_utok" class="tlacitko" onclick="souboj_utok()"> útok </button> 
+           <button id="souboj_tl_akce" class="tlacitko" onclick="souboj_obrana()"> obrana </button> 
+           <button id="souboj_tl_akce" class="tlacitko" onclick="souboj_cekani()"> čekat </button> 
+           <button id="souboj_tl_utek" class="tlacitko" onclick="souboj_akce()"> něco jiného </button> 
+         </div>
+         <div id="souboj_info">
+           <p>Souboj začal!</p>
+         </div>
+      </div>
+    </div>
+<!-- středový pruh - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <main>
+<!-- levý panel, tabulka s postavou - - - - - - - - - - - - - - - - - - - - -->
+    <div id="levy">
+       <table id="tabulka_postava" class="side_table">
+          <tr>
+            <th colspan="3" id="p_jmeno"> 
+              <script> 
+                document.write(localStorage.hst_jmeno)
+              </script>
+            </th>
+          </tr>
+          <tr>
+            <td colspan="3" id="p_povolani"> 
+              <script> 
+                document.write(localStorage.hst_rasa," ",localStorage.hst_povolani);
+              </script>
+            </td>
+          </tr>
+          <tr >
+            <td colspan="3" id="p_avatar" style="background-color:#ffffff00;"> <img src="../img/prazdny.png"></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+            <div id="hp_bar">
+              &nbsp;HP
+              <script> 
+                document.write(localStorage.hst_hpakt,"/",localStorage.hst_hpmax);
+              </script>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+            <div id="mp_bar">
+              &nbsp;MP
+              <script> 
+                document.write(localStorage.hst_mpakt,"/",localStorage.hst_mpmax);
+              </script>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+            <div id="ep_bar">
+              &nbsp;EP
+              <script> 
+                document.write(localStorage.hst_epakt,"/",localStorage.hst_epmax);
+              </script>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td> Síla</td>                          
+            <td id="p_SIL"> <script> document.write(localStorage.hst_SIL) </script></td>
+            <td id="b_SIL"> <script> document.write(localStorage.hst_SILbonus) </script></td>
+          </tr>
+          <tr>
+            <td> Obratnost</td>
+            <td id="p_OBR"> <script> document.write(localStorage.hst_OBR)</script></td>
+            <td id="b_OBR"> <script> document.write(localStorage.hst_OBRbonus) </script></td>
+          </tr>
+          <tr>
+            <td> Chytrost</td>
+            <td id="p_CHY"> <script> document.write(localStorage.hst_CHY)</script></td>
+            <td id="b_CHY"> <script> document.write(localStorage.hst_CHYbonus) </script></td>
+          </tr>
+       </table>
+    </div>
+<!-- hlavní část stránky - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <div id="central_obal">
+    <div id="central">
+       <h1> Intro </h1>
+       <p>Král zemřel a celou zemí zmítají nepokoje - baroni soupeří o trůn, 
+       v okolních královstvích zuří válka a k tomu se všude začínají objevovat
+       různé příšery.  </p>
+       <p>A co bude s tebou? To už musíš rozhodnout sám...</p>
+       <p>Ale kdo vlastně jsi?</p>
+       <input type="button" value="Zjistit, kdo vlastně jsem?" onclick="tvorba_postavy()" class="tlacitko">
+     </div>
+     </div>
+<!-- pravý panel, inventář - - - - - - - - - - - - - - - - - - - - - - - - -->
+     <div id="pravy">
+       <table id="tabulka_inventar" class="side_table">
+          <tr>
+            <th> Tvůj inventář </th>
+          </tr>
+          <tr>
+            <td id="i_polozky"> <script> inv_vypis();</script></td>
+          </tr>
+          <tr>
+            <td> <input type="button" value="Odhodit zátěž" onclick="inv_vysyp()" class="tlacitko"></td>
+          </tr>
+       </table>
+     </div>
+     </main>
+
+<!-- patička - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+     <footer>
+        <div id="testy" style="position: fixed; z-index:1">
+          <input type="text" id="testlokace" value="poz_00">
+          <input type="button" onclick="nastav_ulozeni();" value="Přejdi na pozici">
+          <br>
+          <input type="text" id="testhodnota" value="0">
+          <input type="button" onclick="hptest();" value="změna HP">
+          <br>
+          <input type="text" id="testpotvora" value="jmeno,hp,SIL,OBR,CHY,loot,win,run">
+          <input type="button" onclick="testsouboj();" value="bojuj!"><br>
+        </div>
+        <p>Webdesign Juránek<br>
+          &copy;2020 </p>
+     </footer>
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" href="..\favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="..\styly\hst_styl.css"> 
+    <title> Hra s Titulem </title>
+    <script src="..\skripty\funkce.js"></script>
+    <script src="..\skripty\lokace.js"></script>
+    <script src="..\skripty\inventar.js"></script>
+  </head>
+  <body onLoad="vek();">
+    <div id="stred">
+    <header>
+      <img src="..\img\king.png" height="200px" style="float:right">
+      <h1> Hra s titulem </h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href=".\uvod.html"> Úvod </a></li>
+        <li><a href=".\hra.html"> Hra </a></li>          
+        <li><a href=".\forum.html"> Fórum </a></li>
+        <li><a href=".\autor.html"> Autor </a></li>
+        <li><a href=".\test.html"> Test </a></li>
+      </ul>
+    </nav>
+    <main>
+    <div id="levy">
+         
+    </div>
+    <div id="central_obal">
+    <div id="central">
+      <input type="button" onclick="inv_vypis();" value="Vypsat inventář" class="tlacitko">
+      <br>
+      <input type="text" id="pole_pridej" value="" class="tlacitko">
+      <input type="button" onclick="pridej();" value="Přidej" class="tlacitko">
+      <br>
+      <input type="text" id="pole_seber" value="" class="tlacitko">
+      <input type="button" onclick="seber();" value="Seber" class="tlacitko">
+      <br>
+      <input type="button" onclick="inv_vysyp();" value="Vysypat inventář" class="tlacitko">
+      <br>
+     </div>
+     </div>
+     <div id="pravy">
+       <table id="tabulka_inventar" class="side_table">
+          <tr>
+            <th> Tvůj inventář </th>
+          </tr>
+          <tr>
+            <td id="i_polozky"> <script> inv_vypis();</script></td>
+          </tr>
+          <tr>
+            <td> <input type="button" value="Odhodit zátěž" onclick="inv_vysyp()" class="tlacitko"></td>
+          </tr>
+       </table>
+     </div>
+     </main>
+     <footer>
+        <p>Webdesign Juránek<br>
+        &copy;2020 </p>
+     </footer>
+     </div>
+  </body>
+</html>

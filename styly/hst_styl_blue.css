@@ -1,0 +1,156 @@
+﻿/* CSS Document */
+body {
+  background-color: #172983; 
+  font-family: Candara;
+}
+
+#stred {
+  margin: auto;
+  padding: 5px;
+  width: 900px;
+  background-color: #4bc8ff; 
+  border-radius: 4px;
+}
+
+header {
+  width: 880px;
+  height: 200px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #0090db;
+  border-radius: 4px;
+  /*background-image: url("../img/king.png");
+  background-size: contain;
+  background-repeat: no-repeat; */
+}
+
+header h1 {
+  font-size: 100px;
+  font-weight: bold;
+  text-shadow: -2px -2px 2px #fff054, 2px 2px 2px #fff054, -2px 2px 2px #fff054, 2px -2px 2px #fff054;
+  color: #172983;
+  text-align: center;
+  
+}
+
+nav {
+  width: 880px;
+  height: 80 px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #0058b7;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style:none;
+}
+
+nav ul li {
+  display: inline-block;
+  width: 150px;
+  padding: 2px;
+  border: 2px solid white;
+  border-radius: 4px;
+  text-align: center;
+  color: #0058b7;
+  background-color: white; 
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0058b7;
+}
+
+
+nav ul li:hover {
+  color: #0090db;
+  border: 2px solid #fff054;
+  background-color: #fff054;
+}
+
+footer {
+  width: 880px;
+  height: 100px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #0090db;
+  border-radius: 4px;
+}
+
+footer p {
+  display: block;
+  text-align: right;
+  color: white;
+}
+
+main {
+  width: 880px;
+  height: 510px;
+  margin: 5px; /*5+5=10*/
+  padding: 5px;
+  background-color: #0058b7;
+  color: #fff054;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+#central {  /*5+5+5+5+436+2+2 = 460*/
+  display: block;
+  float: left;
+  margin: 0px 5px 0px 5px;
+  padding: 5px;
+  width: 436px;
+  height: 492px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+#levy {  /*206+2+2 = 210*/
+  display: block;
+  float: left;
+  width: 206px;
+  border: 2px solid white;
+  border-radius: 4px;
+  float: left; 
+}
+
+#pravy { /*206+2+2 = 210*/
+  display: block;
+  float: right;
+  width: 206px;
+  border: 2px solid yellow;
+  border-radius: 4px;
+}
+
+.side_table{
+  width: 212px;
+}
+
+.side_table th, .side_table td{
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  background-color: #172983;
+  text-align: center;
+}
+
+.central_table {
+  width: 212px;
+  border: 2 px solid white;
+}
+
+.central_table th, .central_table td{
+  width: 212px;
+  color: white;
+  text-align: left;
+}
+
+.tlacitko {
+  background-color: white;
+  color: #172983;
+  font: 16px Candara; 
+  padding: 6px;
+  border-radius: 4px;
+}
