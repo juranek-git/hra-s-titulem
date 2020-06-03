@@ -434,6 +434,6 @@ function zmena_ep(hodnota) {
 function smrt(){
   //sníží HP na nulu a oznámí konec hry
   localStorage.hst_hpakt = 0;
-  alert("To je konec...");
-  central.innerHTML = "<h1> Konec </h1><p>Na své cestě k titulu jsi bídně zhynul.</p>";
+  poz_nn();
+  //central.innerHTML = "<h1> Konec </h1><p>Na své cestě k titulu jsi bídně zhynul.</p>";
 }
