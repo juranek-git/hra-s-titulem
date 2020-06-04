@@ -108,5 +108,5 @@ function poz_12() {
 function poz_nn(){
   central.innerHTML="<p>Ale ne, co se te děje. Svět kolem tebe nějak tmavne. Že by se tak rychle stmívalo? Ale ne, to už se na tebe zubí zubatá. Všechno jednou končí. Někdo se narodí, jiný zemře. Tvým podsledním přáním je, aby někdo z těch narozených dokončil tvé dobrodružtví, abys mohl svůj úkol předat dál.</p>"
   central.innerHTML +=
-    "<br><input type='button' class='tlacitko' onclick='zapomenout();' value='Předat úkol' id='tl_zemrit'><br>";
+    "<br><input type='button' class='tlacitko' onclick='zapomenout();' value='Předat úkol' id='tl_umrit'><br>";
 }
